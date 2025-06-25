@@ -1,0 +1,21 @@
+std_msgs/Header            header
+string                     optimizer
+int64                      iterations
+int64                      batch_size
+int64                      particle_count
+bool                       normalize
+float64                    learning_rate
+float64                    correspondence_distance
+bool                       early_stop
+int16                      converge_steps
+float64                    converge_threshold
+bool                       deskew_cloud
+bool                       voxelization
+float64                    voxel_size
+float64                    map_voxel_size
+float64                    map_voxel_max_points
+float64[2]                 point_range
+bool                       weight_mean
+float64                    md_learning_rate
+int64                      md_iterations
+

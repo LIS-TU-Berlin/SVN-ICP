@@ -1,0 +1,99 @@
+---
+/steinicp/SteinMICP:
+   ros__parameters:
+      estimator: "ICP"  # ICP, KF
+      class_type: "SteinMICP"
+      dataset_duration: 417621512895.
+      SteinICP_parameters:
+           optimizer : "Adam"   # only used for original Stein ICP
+           iterations: 100
+           batch_size: 1000
+           particle_size: 30
+           normalize: false
+           lr: 1.  #0.03
+           max_dist: 3.0
+
+           knn_count: 100
+           frame_gap_seconds: 0.05
+           using_EarlyStop: true
+           convergence_steps: 3
+           convergence_threshold: 0.0001
+           deskew_cloud: false
+           max_range: 100.0
+           min_range: 0.3      # 0.3 for New college cloister, 5.0 for others
+           voxel_size: 0.2
+           map_voxel_max_points: 1
+           map_voxel_size: .2
+           map_range: 300.0
+           USE_Segmentation: false
+           SVNFullGrad: false
+
+           use_weight_mean: false
+
+           save_particles: false
+           pub_cloud: false
+           cov_filter_type: "none"   # none, mean or "max_sliding_window"
+
+      lidar_param:
+           topic: "/velodyne_packets"   # "/velodyne_points"
+
+      imu_param:
+           topic: "/imu/data"
+
+           rot_rw: [ 10., 10., 10. ]   #[ 1., 1., 1. ]          # [deg/sqrt(hr)]
+           vel_rw: [100., 100., 100. ]   #[100., 100., 100. ]          # [m/s/sqrt(hr)]
+
+           gbstd: [ 20.0, 20.0, 20.0 ]        # [deg/hr]
+           abstd: [ 500.0, 500.0, 500.0 ]     # [mGal]
+           corrtime: 1.0                    # [hr]
+
+      lio_param:
+           const_LidarCov: [1e-4, 1e-5]
+           use_constCov: false
+           initposstd: [ 0.05, 0.05, 0.05 ]
+           # initial velocity std, north, east and down speed in n-frame. [m/s, m/s, m/s]
+           initvelstd: [ 0.05, 0.05, 0.05 ]
+           # initial attitude std, roll, pitch and yaw std. [deg, deg, deg]
+           initattstd: [ 0.1, 0.1, 0.1 ]
+
+           # sensor calibration parameter transformation from imu frame to lidar frame
+           extrinsic_t: [ 0.08, 0.029, 0.03 ]
+##            Long Corridor
+           #extrinsic_R: [0.999212900, -0.000519121,  0.004000000,
+           #              0.000516111,  0.999218492, -0.000939132,
+           #              -0.004000000,  0.000802565,  0.999993652]
+           #Multi Floor
+           extrinsic_R: [ 0.999945562, 0.009074807,  0.005149763,
+                         -0.009060897, 0.999955255, -0.002718066,
+                         -0.005174199, 0.002671256,  0.999983046]
+           #Block Lidar
+#           extrinsic_R: [ 0.999987674, 0.003771516,  0.005229183,
+#                         -0.003775845, 0.999991979, -0.001335715,
+#                         -0.005224119, 0.001347892,  0.999993894]
+
+           # LaurelCavern
+           #extrinsic_t: [ 0.08, 0.029, 0.03 ]
+          # extrinsic_R: [ 1., 0., 0.,
+           #               0., 1., 0.,
+          #                0., 0., 1. ]
+
+           # UGV1
+#           extrinsic_t: [ 0., 0., 0.]
+#           extrinsic_R: [ 1., 0., 0.,
+#                          0., 1., 0.,
+#                          0., 0., 1. ]
+#           extrinsic_t: [ -0.0351814, -0.0147287, 0.06434955]
+#           extrinsic_R: [ 0.9998875, 0., 0.002,
+#                          0.,        1., 0.,
+#                          -0.002,    0., 0.9998875 ]
+           # simulation
+#           extrinsic_t: [ 0., 0., 0. ]
+#           extrinsic_R: [ 0., 1., 0.,
+#                          1., 0., 0.,
+#                          0., 0., -1. ]
+
+
+
+
+
+
