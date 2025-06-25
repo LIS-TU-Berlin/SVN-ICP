@@ -55,8 +55,8 @@
 #include "Buffer.h"
 #include "DataTypes.h"
 
-#include "SteinICP.h"
-#include "SteinMICP.h"
+#include "SVGD_ICP.h"
+#include "SVN_ICP.h"
 #include "utils.h"
 #include "types.h"
 #include "VoxelHashMap.h"

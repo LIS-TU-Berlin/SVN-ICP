@@ -76,19 +76,19 @@ namespace stein_icp
         // publish the ego-centric frame
         tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
         // publishers
-        path_publisher_ = this->create_publisher<nav_msgs::msg::Path>("/stein_icp/trajectories", 10);
-        state_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/stein_icp/body_state", 10);
-        prediction_publisher_ = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("/stein_icp/prediction",10);
-        raw_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/stein_icp/raw_cloud", 1);
-        source_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/stein_icp/source_cloud", 1);
-        localmap_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/stein_icp/localmap_cloud", 1);
-        neighbourmap_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/stein_icp/neighbourmap_cloud", 1);
-        last_particle_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParticle>("/stein_icp/particles", 10);
-        stein_param_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParameters>("/stein_icp/parameters",10);
-        runtime_publisher_ = this->create_publisher<stein_particle_msgs::msg::Runtime>("/stein_icp/runtime", 10);
-        all_particle_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParticleArray>("/stein_icp/all_particles",10);
-        variance_publisher_ = this->create_publisher<stein_particle_msgs::msg::Variance>("/stein_icp/variance", 10);
-        KF_Gain_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParticle>("/stein_icp/kf_gain", 10);
+        path_publisher_ = this->create_publisher<nav_msgs::msg::Path>("/svn_icp/trajectories", 10);
+        state_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("/svn_icp/body_state", 10);
+        prediction_publisher_ = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("/svn_icp/prediction",10);
+        raw_cloud_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/svn_icp/raw_cloud", 1);
+        source_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/svn_icp/source_cloud", 1);
+        localmap_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/svn_icp/localmap_cloud", 1);
+        neighbourmap_publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/svn_icp/neighbourmap_cloud", 1);
+        last_particle_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParticle>("/svn_icp/particles", 10);
+        stein_param_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParameters>("/svn_icp/parameters",10);
+        runtime_publisher_ = this->create_publisher<stein_particle_msgs::msg::Runtime>("/svn_icp/runtime", 10);
+        all_particle_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParticleArray>("/svn_icp/all_particles",10);
+        variance_publisher_ = this->create_publisher<stein_particle_msgs::msg::Variance>("/svn_icp/variance", 10);
+        KF_Gain_publisher_ = this->create_publisher<stein_particle_msgs::msg::SteinParticle>("/svn_icp/kf_gain", 10);
 
         // ICP loop
         steinicp_thread_ = std::make_shared<std::thread>(
@@ -625,7 +625,7 @@ namespace stein_icp
             gtsam::Pose3 pose3_current;
             Updater_(initial_guess, pose3_current, correction_tr, var_vector, cov_mat, lidar_time);
 //            if(estimator==ICP){
-//                auto correction_pose = stein_icp::tensor2gtsamPose3(correction_tr);
+//                auto correction_pose = svn_icp::tensor2gtsamPose3(correction_tr);
 //                pose3_current =  gtsam::Pose3(initial_guess.matrix()*correction_pose.matrix());
 //            }
 //            else {

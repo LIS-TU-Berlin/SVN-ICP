@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(stein_micp_lio)
+project(svn_icp_lio)
 
 if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     add_compile_options(-Wall -Wextra -Wpedantic -std=c++17)
@@ -34,9 +34,9 @@ find_package(stein_particle_msgs REQUIRED)
 
 include_directories(
         include
-        include/stein_icp
-        include/stein_icp/knn
-        include/stein_icp/utils
+        include/svn_icp
+        include/svn_icp/knn
+        include/svn_icp/utils
         include/data
         include/fgo_interface
         include/utils
@@ -55,13 +55,13 @@ include_directories(
 
 ### build SteinICP class
 add_library(stein_icp SHARED
-        src/stein_icp/SteinICP.cpp
-        src/stein_icp/SteinMICP.cpp
-        src/stein_icp/utils.cpp
-        src/stein_icp/knn/knn.cu
-        src/stein_icp/knn/knn_cpu.cpp
-        src/stein_icp/knn/knn.cpp
-        src/stein_icp/VoxelHashMap.cpp
+        src/svn_icp/SVGD_ICP.cpp
+        src/svn_icp/SVN_ICP.cpp
+        src/svn_icp/utils.cpp
+        src/svn_icp/knn/knn.cu
+        src/svn_icp/knn/knn_cpu.cpp
+        src/svn_icp/knn/knn.cpp
+        src/svn_icp/VoxelHashMap.cpp
 )
 
 target_link_libraries(stein_icp
@@ -77,11 +77,11 @@ target_link_libraries(stein_icp
 
 #### build a steinicp top level in ros2
 #add_library(steinicp_ros2
-#            src/stein_icp/steinicp_ros2.cpp
+#            src/svn_icp/steinicp_ros2.cpp
 #            )
 #
 #target_link_libraries(steinicp_ros2
-#                      stein_icp
+#                      svn_icp
 #                      )
 #
 #
@@ -94,10 +94,10 @@ target_link_libraries(stein_icp
 #                         "pcl_conversions")
 #
 #
-#### build a simple node in which instance a stein_icp odometry(steinicp_ros2)
+#### build a simple node in which instance a svn_icp odometry(steinicp_ros2)
 add_library(odom SHARED
-        src/stein_icp/OdometryPipeline.cpp
-        src/stein_icp/VoxelHashMap.cpp
+        src/svn_icp/OdometryPipeline.cpp
+        src/svn_icp/VoxelHashMap.cpp
         src/estimator/KalmanFilterBase.cpp
         src/estimator/ESEKF.cpp
         src/imu/imu.cpp
@@ -126,15 +126,15 @@ ament_target_dependencies(odom
 
 
 # generate executable and link to steinicp_ros2 library
-add_executable(stein_micp_lio_node
-        src/node/stein_icp_node.cpp
+add_executable(svn_icp_lio_node
+        src/node/svn_icp_node.cpp
 )
 
-target_link_libraries(stein_micp_lio_node
+target_link_libraries(svn_icp_lio_node
         odom
 )
 
-install(TARGETS stein_micp_lio_node
+install(TARGETS svn_icp_lio_node
         DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})

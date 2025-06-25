@@ -5,7 +5,7 @@
 #ifndef STEINICP_BETASTEINICP_H
 #define STEINICP_BETASTEINICP_H
 
-#include "SteinICP.h"
+#include "SVGD_ICP.h"
 
 namespace stein_icp {
     struct ParticleWeightOpt {
@@ -66,6 +66,6 @@ namespace stein_icp {
         torch::Tensor target_knn_;
 
     }; // class SteinMICP
-} //namespace stein_icp
+} //namespace svn_icp
 
 #endif //STEINICP_BETASTEINICP_H

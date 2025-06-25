@@ -2,7 +2,7 @@
 // Created by haoming on 22.08.23.
 //
 
-#include "SteinMICP.h"
+#include "SVN_ICP.h"
 
 namespace stein_icp
 {

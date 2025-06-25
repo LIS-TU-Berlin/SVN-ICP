@@ -4,7 +4,7 @@
 
 
 #include <memory>
-#include "SteinICP.h"
+#include "SVGD_ICP.h"
 
 
 namespace stein_icp {
