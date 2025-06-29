@@ -1,0 +1,48 @@
+---
+/svnicp/SVNICP:
+   ros__parameters:
+      class_type: "SVNICP"   # SVNICP or SVGDICP
+      SVNICP_parameters:
+           optimizer : "Adam"   # only used for original Stein ICP
+           iterations: 30
+           batch_size: 200
+           particle_size: 30
+           normalize: false
+           lr: 0.03
+           max_dist: 1.0
+           frame_gap_seconds: 0.05
+           using_EarlyStop: true
+           convergence_steps: 3
+           convergence_threshold: 0.0001
+
+           deskew_cloud: true
+
+           max_range: 100.0
+           min_range: 5.0       # 0.3 for New college cloister, 5.0 for others
+           voxel_size: 1.0
+           map_voxel_max_points: 20
+           map_voxel_size: 1.0
+
+           USE_Segmentation: false
+
+           use_weight_mean: false
+
+           save_particles: true
+           pub_cloud: true
+
+      lidar_param:
+           topic: "/rslidar_points"
+                     # /velodyne_points   
+                     # /lio_sam/deskew/cloud_deskewed   
+                     # /boreas/velodyne_points
+                     # /os_cloud_node/points
+                     # /rslidar_points
+                     # /kitti/velo/pointcloud
+                     # /lidar_front/os_cloud_node/points
+                     # /Ouster
+
+                     # data path
+                     # /home/haoming/Desktop/2022-03-31_IMU_NovAtel_PPS_RTCM_Ublox_Velodyne10Hz_City/
+                     # /mnt/data/new_college_complete/2021-ouster-os0-128-alphasense/collection_1_newer_college/2021-07-01-10-37-38-quad-easy/
+                     # /mnt/data/new_college_complete/2021-ouster-os0-128-alphasense/collection_3_maths_institute/2021-04-07-13-49-03_0-math-easy/
+                     # /mnt/data/ros2bag_boreas-2020-12-18-13-44/
