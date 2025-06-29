@@ -1,6 +1,6 @@
 /*  ------------------------------------------------------------------
-    Copyright (c) 2020-2025 Haoming Zhang
-    email: haoming.zhang@rwth-aachen.de
+    Copyright (c) 2020-2025 XXX
+    email: XXX
 
     This code is distributed under the MIT License.
     Please see <root-path>/LICENSE for details.
@@ -9,7 +9,7 @@
 /**
  * @file    Buffer.h
  * @brief   circular data buffer based on boost::circular_buffer
- * @author  Haoming Zhang*
+ * @author  UNKNOWN
  * @date    June 22, 2025
  */
 

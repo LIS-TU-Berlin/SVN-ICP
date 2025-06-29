@@ -1,16 +1,16 @@
 /*  ------------------------------------------------------------------
-    Copyright (c) 2020-2025 Shiping Ma and Haoming Zhang
-    email: shiping.ma@tu-berlin.de and haoming.zhang@rwth-aachen.de
+    Copyright (c) 2020-2025 XXX
+    email: XXX
 
     This code is distributed under the MIT License.
     Please see <root-path>/LICENSE for details.
     --------------------------------------------------------------  */
 
 /**
- * @file    .cpp
- * @brief   Definies the odometry pipline that serves as the estimator and data interface for the ICP
- * @author  Shiping Ma
- * @author  Haoming Zhang*
+ * @file    KalmanFilterBase.cpp
+ * @brief   Kalman Filter base
+ * @author  UNKNOWN
+ * @author  UNKNOWN
  * @date    June 22, 2025
  */
 

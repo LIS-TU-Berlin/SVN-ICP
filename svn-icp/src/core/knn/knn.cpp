@@ -1,8 +1,3 @@
-//
-// Created by haoming on 20.07.23.
-//
-
-
 
 #include "core/knn/knn.h"
 

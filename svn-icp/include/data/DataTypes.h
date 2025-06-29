@@ -1,6 +1,6 @@
 /*  ------------------------------------------------------------------
-    Copyright (c) 2020-2025 Haoming Zhang
-    email: haoming.zhang@rwth-aachen.de
+    Copyright (c) 2020-2025 XXX
+    email: XXX
 
     This code is distributed under the MIT License.
     Please see <root-path>/LICENSE for details.

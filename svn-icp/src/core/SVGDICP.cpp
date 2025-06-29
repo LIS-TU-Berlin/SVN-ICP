@@ -1,6 +1,6 @@
 /*  ------------------------------------------------------------------
-    Copyright (c) 2020-2025 Shiping Ma and Haoming Zhang
-    email: shiping.ma@tu-berlin.de and haoming.zhang@rwth-aachen.de
+    Copyright (c) 2020-2025 XXX
+    email: XXX
 
     This code is distributed under the MIT License.
     Please see <root-path>/LICENSE for details.
@@ -9,8 +9,8 @@
 /**
  * @file    SVGDICP.cpp
  * @brief   SVGD-ICP
- * @author  Shiping Ma*
- * @author  Haoming Zhang
+ * @author  UNKNOWN
+ * @author  UNKNOWN
  * @date    June 22, 2025
  */
 
