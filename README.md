@@ -22,7 +22,7 @@
 ## 📰 News
 
 - 🎉 [Sep. 26 2025] Our paper has been accepted to the IEEE RA-L.
-
+- 🚀 [Sep. 27 2025] See you at IEEE ICRA 2026 in Vienna!
 
 ## :gear: Build
 
