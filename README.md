@@ -19,6 +19,10 @@
   <p align="center"><img src=resources/demo.gif alt="animated" width="1800" /></p>
 </div>
 
+## 📰 News
+
+- 🎉 [Sep. 26 2025] Our paper has been accepted to the IEEE RA-L.
+
 
 ## :gear: Build
 
@@ -66,10 +70,25 @@ You must update the LibTorch path in the `CMakeList.txt` at `line 9`.
 
 ## :gear: Run
 
-Running SVN-ICP is then straightfoward as
+Running SVN-ICP on the SubT-MRS dataset is then straightfoward as
+```
+ros2 launch svn-icp subt-mrs.launch.py
+```
 
+If you want to record the result bag configured in the launch file:
+```
+ros2 launch svn-icp subt-mrs.launch.py "record:=True" "record_name:=RECORD_NAME" "record_path:=RECORD_PATH"
+```
 
 You are also encouraged to have a look into the launch files to check if you want to change the options.
+
+To understand and tune the parameters, please refer to [config](./svn-icp/config).
+
+## ⚠️ Please Note
+
+- 📌 The SVGD-ICP in ```SVGDICP.cpp``` implemented in this repository **IS NOT** the original work of [**Stein ICP**](https://ieeexplore.ieee.org/document/9661415).
+- 📄 We have also re-implemented the original **Stein ICP** in C++, which is available [here](https://github.com/msp666/SteinICP-Odometry-and-Mapping).
+- 🙌 This coding project has been refactored recently and it has been only briefly tested. If you have any problems, please open an issue.
 
 
 ## :sparkles: Contributors
