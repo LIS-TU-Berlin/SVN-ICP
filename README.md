@@ -50,7 +50,7 @@
     Compile and install the <a href="https://github.com/Tessil/robin-map">robin-map</a>.
 
 
-#### :package: Create and Compile the SVN-ICP workspace
+### :package: Create and Compile the SVN-ICP workspace
 
     
 ```sh
