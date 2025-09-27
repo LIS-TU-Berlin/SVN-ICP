@@ -9,7 +9,7 @@
     <br />
     <br />
     <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-    <a href="https://www.youtube.com/watch?v=CU6aAiTIO6Y">Video</a>
+    <a href="https://arxiv.org/abs/2509.08069">Video</a>
     <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
     <a href="https://arxiv.org/abs/2509.08069">Paper</a>
     <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
