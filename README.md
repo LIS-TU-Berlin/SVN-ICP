@@ -21,20 +21,20 @@
 
 ## 📰 News
 
-- 🎉 [Sep. 26 2025] Our paper has been accepted to the IEEE RA-L.
-- 🚀 [Sep. 27 2025] See you at IEEE ICRA 2026 in Vienna!
+- 🎉 [26 September 2025] Our paper has been accepted to the IEEE RA-L.
+- 🚀 [27 September 2025] See you at IEEE ICRA 2026 in Vienna!
 
 ## :gear: Build
 
 ### :package: Dependencies
 
-#### The following dependencies should be installed prior to compile the SVN-ICP workspace.
+#### The following dependencies should be installed prior to compiling the SVN-ICP workspace.
 
 
 1. **CUDA** and **LibTorch**
 
-    Install CUDA in your favorit version from <a href="https://developer.nvidia.com/cuda-toolkit">NVIDIA</a>.
-    You may want to consulte <a href="https://pytorch.org/get-started/locally/">PyTorch</a> to get which CUDA versions are supported by the current LibTorch. **This is the easiest way to get libtorch installed on your computer!**
+    Install CUDA in your favorite version from <a href="https://developer.nvidia.com/cuda-toolkit">NVIDIA</a>.
+    You may want to consult <a href="https://pytorch.org/get-started/locally/">PyTorch</a> to get which CUDA versions are supported by the current LibTorch. **This is the easiest way to get libtorch installed on your computer!**
     
     If you cannot find the pre-compiled LibTorch from its official site, you can follow <a href="https://github.com/pytorch/pytorch/blob/main/docs/libtorch.rst">THIS INSTRUCTION</a> to build LibTorch for your development environment given a particular CUDA version.
 
@@ -70,7 +70,7 @@ You must update the LibTorch path in the `CMakeList.txt` at `line 9`.
 
 ## :gear: Run
 
-Running SVN-ICP on the SubT-MRS dataset is then straightfoward as
+Running SVN-ICP on the SubT-MRS dataset is then straightforward as
 ```
 ros2 launch svn-icp subt-mrs.launch.py
 ```
@@ -80,7 +80,7 @@ If you want to record the result bag configured in the launch file:
 ros2 launch svn-icp subt-mrs.launch.py "record:=True" "record_name:=RECORD_NAME" "record_path:=RECORD_PATH"
 ```
 
-You are also encouraged to have a look into the launch files to check if you want to change the options.
+You are also encouraged to have a look at the launch files to check if you want to change the options.
 
 To understand and tune the parameters, please refer to [config](./svn-icp/config).
 
@@ -88,12 +88,12 @@ To understand and tune the parameters, please refer to [config](./svn-icp/config
 
 - 📌 The SVGD-ICP in ```SVGDICP.cpp``` implemented in this repository **IS NOT** the original work of [**Stein ICP**](https://ieeexplore.ieee.org/document/9661415).
 - 📄 We have also re-implemented the original **Stein ICP** in C++, which is available [here](https://github.com/msp666/SteinICP-Odometry-and-Mapping).
-- 🙌 This coding project has been refactored recently and it has been only briefly tested. If you have any problems, please open an issue.
+- 🙌 This coding project has been refactored recently, and it has been only briefly tested. If you have any problems, please open an issue.
 
 
 ## :sparkles: Contributors
 
-We are also happy to call contributions not only on the code but also for future research collaborations from the robotics community. If you are interested, mail us or open a Pull Request!
+We are also happy to accept contributions not only to the code but also for future research collaborations from the robotics community. If you are interested, mail us or open a Pull Request!
 
 <a href="https://github.com/LIS-TU-Berlin/SVN-ICP/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=LIS-TU-Berlin/SVN-ICP" />
@@ -134,15 +134,17 @@ doi = {10.48550/arXiv.2409.04961},
 
 ## :page_with_curl: Citation
 
-To cite our work in your papers, you can use the following bibtex:
+To cite our work in your papers, you can use the following BibTeX:
 ```
-@article{svn-icp,
-author = {Ma, Shiping and Zhang, Haoming and Toussaint, Marc},
-title ={{SVN-ICP}: Uncertainty Estimation of {ICP}-based {LiDAR} Odometry using {S}tein {V}ariational {N}ewton},
-journal={IEEE Robotics and Automation Letters}, 
-year = {2025},
-doi = {10.48550/arXiv.2509.08069},
-}
+@ARTICLE{svn-icp,
+  author={Ma, Shiping and Zhang, Haoming and Toussaint, Marc},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={SVN-ICP: Uncertainty Estimation of ICP-Based LiDAR Odometry Using Stein Variational Newton}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/LRA.2025.3619836}}
 ```
 
 ## :pray: Acknowledgement
