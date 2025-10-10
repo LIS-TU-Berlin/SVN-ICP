@@ -128,7 +128,7 @@ author = {Zhiqiang Chen and Yihua Qi and Dapeng Feng and Xuebin Zhuang and Hongb
 title ={Heterogeneous {LiDAR} Dataset for Benchmarking Robust Localization in Diverse Degenerate Scenarios},
 journal = {Int. J. Robot. Res. (IJRR)},
 year = {2025},
-doi = {10.48550/arXiv.2409.04961},
+doi = {10.1177/02783649251344967},
 }
 ```
 
