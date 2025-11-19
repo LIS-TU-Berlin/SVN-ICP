@@ -87,7 +87,7 @@ To understand and tune the parameters, please refer to [config](./svn-icp/config
 ## ⚠️ Please Note
 
 - 📌 The SVGD-ICP in ```SVGDICP.cpp``` implemented in this repository **IS NOT** the original work of [**Stein ICP**](https://ieeexplore.ieee.org/document/9661415).
-- 📄 We have also re-implemented the original **Stein ICP** in C++, which is available [here](https://github.com/msp666/SteinICP-Odometry-and-Mapping).
+- 📄 We have also re-implemented the original **Stein ICP** in C++, which is available [here](https://github.com/msp666/SteinICP-Odometry-and-Mapping) (still messy code, will be refactored upon the next publication).
 - 🙌 This coding project has been refactored recently, and it has been only briefly tested. If you have any problems, please open an issue.
 
 
@@ -141,15 +141,16 @@ To cite our work in your papers, you can use the following BibTeX:
   journal={IEEE Robotics and Automation Letters}, 
   title={SVN-ICP: Uncertainty Estimation of ICP-Based LiDAR Odometry Using Stein Variational Newton}, 
   year={2025},
-  volume={},
-  number={},
-  pages={1-8},
+  volume={10},
+  number={11},
+  pages={12181-12188},
   doi={10.1109/LRA.2025.3619836}}
+
 ```
 
 ## :pray: Acknowledgement
 
-Many thanks to the authors of **GenZ-ICP** for this wonderful template of MarkDown.
+Many thanks to the authors of **GenZ-ICP** for this wonderful template of Markdown.
 
 Please refer to [GenZ-ICP][genzicplink] for more information
 
@@ -159,7 +160,7 @@ Please refer to [GenZ-ICP][genzicplink] for more information
 
 If you have any questions, please do not hesitate to contact us
 
-* [Haoming Zhang][hzlink] :e-mail: haoming`dot`zhang `at` rwth-aachen `dot` de
+* [Haoming Zhang][hzlink] :e-mail: haoming`dot`zhang `at` tum `dot` de
 * [Shiping Ma][splink] :e-mail: shiping`dot`ma `at` tu-berlin `dot` de
 
 [hzlink]: https://probablyinconsistent.de/
